@@ -51,4 +51,35 @@ p{
 .contentMenu{
   display: flex;
   flex-direction: row;
+  width: 95%;
+}
+
+.selectedMenu{
+  background: #586E75;
+}
+
+.notSelectedMenu{
+  background: #073642;
+}
+
+.menuTab{
+  box-shadow: 0px -5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px 15px 0px 0px;
+  width: 25%;
+  height: 58px;
+}
+
+.menuText{
+  font-family: Harmattan;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 55px;
+
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
