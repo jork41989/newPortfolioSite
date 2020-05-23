@@ -14,9 +14,41 @@
   box-shadow: -2px -5px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: row;
-  height: 50px;
+  height: 100px;
 }
 
 .logo{
   margin-left: 10px;
+  height: 85px;
+  align-self: center;
+}
+
+.logoImg{
+  height: 85px;
+}
+
+p{
+  font-family: Monaco;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Name{
+  margin-left: 20px;
+  font-family: Monaco;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 105px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FEFCFC;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contentMenu{
+  display: flex;
+  flex-direction: row;
 }
