@@ -1,0 +1,22 @@
+
+.mainDiv{
+  background: #002B36;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headBar{
+  border-radius: 15px 15px 0px 0px;
+  width: 95%;
+  background: #586E75;
+  box-shadow: -2px -5px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.logo{
+  margin-left: 10px;
+}
