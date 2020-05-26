@@ -91,9 +91,9 @@
   !*** ./src/index.js ***!
   \**********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const Startup = __webpack_require__(!(function webpackMissingModule() { var e = new Error(\"Cannot find module 'startup'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));\n\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n  const MainDiv = document.getElementById(\"mainDiv\");\n  const StartupGo = new Startup(MainDiv);\n  StartupGo.goForLaunch();\n})\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
