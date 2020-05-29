@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/content.js":
+/*!************************!*\
+  !*** ./src/content.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("class Content {\n  constructor() {\n    this.startAbout = this.startAbout.bind(this)\n  }\n\n  startAbout(){\n    let aboutPhoto = document.getElementById(\"profilePhoto\")\n    let aboutText = document.getElementById(\"aboutText\")\n    setTimeout(()=> {\n      aboutPhoto.classList.add(\"fadeMe\")\n      aboutText.classList.add(\"fadeMe\")\n    }, 500)\n  }\n\n}\n\nmodule.exports = Content\n\n//# sourceURL=webpack:///./src/content.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -93,7 +104,18 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const Startup = __webpack_require__(!(function webpackMissingModule() { var e = new Error(\"Cannot find module 'startup'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));\n\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n  const MainDiv = document.getElementById(\"mainDiv\");\n  const StartupGo = new Startup(MainDiv);\n  StartupGo.goForLaunch();\n})\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const Startup = __webpack_require__(/*! ./startup */ \"./src/startup.js\");\n\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n  const MainDiv = document.getElementById(\"mainDiv\");\n  const StartupGo = new Startup(MainDiv);\n  StartupGo.goForLaunch();\n})\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/startup.js":
+/*!************************!*\
+  !*** ./src/startup.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const Content = __webpack_require__(/*! ./content */ \"./src/content.js\");\n\nclass Startup{\n  constructor(mainDiv){\n    this.started = false;\n    this.i = 0\n    this.goForLaunch = this.goForLaunch.bind(this)\n    this.content = new Content\n    \n  }\n\n  \n\n  goForLaunch(){\n    this.openingCrawl()\n    if (this.started) console.log(\"is anyone there?\")\n    \n\n  }\n  \n  openingCrawl(){\n    let openingDiv = document.getElementById(\"opening\")\n    let openingText = document.getElementById(\"openingText\")\n    let openingTextDiv = document.getElementById(\"openingTextDiv\")\n    if (!this.started) {\n      let message = \"Welcome To JordanAckerman.com\"\n      let mesSplit = message.split(\"\")\n      let timeout = 200;\n      mesSplit.forEach(char => {\n\n        setTimeout(() => {\n          openingText.innerHTML += char;\n          if(message === openingText.innerHTML) {\n            this.started = true\n            setTimeout(()=>{\n              openingDiv.classList.add(\"hideMe\")\n              openingTextDiv.classList.add(\"hideMe\")\n              this.content.startAbout()\n              \n            }, 2000)\n          }\n        }, timeout)\n        timeout += 200\n      })\n\n    }\n    if (this.started) console.log(\"is anyone there?\")\n  }\n\n\n}\n\n\n\n\nmodule.exports = Startup\n\n//# sourceURL=webpack:///./src/startup.js?");
 
 /***/ })
 

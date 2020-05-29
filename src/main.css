@@ -14,9 +14,24 @@
   box-shadow: -2px -5px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   height: 100px;
 }
+.socialLogos{
+  margin-right: 10px;
+  align-self: center;
+  font-size: 36px;
+  color: #2aa198;
+}
 
+.socialLogos :hover{
+  color: #ffffff;
+}
+
+.logoDiv{
+  display: flex;
+  flex-direction: row;
+}
 .logo{
   margin-left: 10px;
   height: 85px;
@@ -61,11 +76,15 @@ p{
 .notSelectedMenu{
   background: #073642;
 }
+.notSelectedMenu :hover{
+  background: #586E75;
+}
 
 .menuTab{
   box-shadow: 0px -5px 4px rgba(0, 0, 0, 0.25);
   width: 25%;
   height: 58px;
+  cursor: pointer;
 }
 
 .menuText{
@@ -82,14 +101,18 @@ p{
 
 .contentBackground{
   background: #586E75;
-  width: 95%
+  width: 95%;
+  height: 80%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .contentBody{
   background: #073642;
   border-radius: 30px;
   margin: 10px;
- 
+  padding: 4%;
+  height: 80%;
 }
 
 #aboutContent{
@@ -104,7 +127,13 @@ p{
   font-weight: normal;
   font-size: 24px;
   padding: 15px;
+  line-height: 30px;
   color: #EEE8D5;
+  opacity: 0;
+}
+.contentHeader{
+  font-size: 36px;
+  color: #b58900;
 }
 
 .profilePhotoDiv{
@@ -116,7 +145,16 @@ p{
   height: 300px;
   width: 300px;
   border-radius: 50%;
+  opacity: 0;
 }
+
+.fadeMe{
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+
+
 
 .openingBack{
   position: absolute;
@@ -137,6 +175,7 @@ p{
     margin: 0 auto;
     overflow: hidden;
     height: 55px;
+    width: fit-content;
     animation: 
       blinking-cursor .5s step-end infinite;
 }
@@ -145,6 +184,22 @@ p{
      padding-top: 20%;
      align-items: center;
 }
+
+.hidden{
+  display: none;
+  
+}
+
+.hideMe{
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  transition-property: opacity, height, padding;
+  transition-duration: 2s, 0s, 0s;
+  transition-delay: 0s, 2s, 2.3s;
+
+}
+
 
 
 @keyframes blinking-cursor {
