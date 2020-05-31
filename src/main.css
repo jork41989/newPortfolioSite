@@ -207,3 +207,11 @@ p{
   from, to { border-color: transparent }
   50% { border-color: orange }
 }
+
+@media only screen and (max-width: 920px) {
+
+  .Name{
+    font-size: 2em;
+    margin-left: 5px;
+  }
+}
