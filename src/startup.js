@@ -22,6 +22,7 @@ class Startup{
     let openingDiv = document.getElementById("opening")
     let openingText = document.getElementById("openingText")
     let openingTextDiv = document.getElementById("openingTextDiv")
+    let openingTextP = document.getElementById("openingText")
     if (!this.started) {
       let message = "Welcome To JordanAckerman.com"
       let mesSplit = message.split("")
@@ -35,6 +36,7 @@ class Startup{
             setTimeout(()=>{
               openingDiv.classList.add("hideMe")
               openingTextDiv.classList.add("hideMe")
+              openingTextP.classList.add("hideMe")
               this.content.startAbout()
               
             }, 2000)
