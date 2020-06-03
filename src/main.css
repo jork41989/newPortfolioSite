@@ -216,6 +216,22 @@ html{
 
 }
 
+.projectPreview{
+  max-width: 33.33%;
+  height: 800px;
+}
+
+.projectPreview img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#bodyProjects{
+  display: flex;
+  flex-direction: row;
+}
+
 
 
 @keyframes blinking-cursor {
