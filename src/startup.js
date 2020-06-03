@@ -23,6 +23,7 @@ class Startup{
     let openingText = document.getElementById("openingText")
     let openingTextDiv = document.getElementById("openingTextDiv")
     let openingTextP = document.getElementById("openingText")
+    
     if (!this.started) {
       let message = "Welcome To JordanAckerman.com"
       let mesSplit = message.split("")

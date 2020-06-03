@@ -118,8 +118,17 @@ p{
 
 #aboutContent{
  display: flex;
- flex-direction: row;
+ flex-direction: column;
 
+}
+
+.headerDiv{
+  padding: 15px;
+}
+
+.sideBySide{
+  display: flex;
+  flex-direction: row;
 }
 
 .contentText{
@@ -132,9 +141,14 @@ p{
   color: #EEE8D5;
   opacity: 0;
 }
+
+#headerDiv{
+  
+}
 .contentHeader{
   font-size: 36px;
   color: #b58900;
+  opacity: 0;
 }
 
 .profilePhotoDiv{
