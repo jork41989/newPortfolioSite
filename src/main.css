@@ -217,7 +217,7 @@ html{
 }
 
 .projectPreview{
-  max-width: 33.33%;
+  width: 33.33%;
   height: 800px;
 }
 
@@ -225,6 +225,9 @@ html{
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+#cumulusNotePreviewDiv{
+  background-image: url(../src/images/CumulusScreen.png);
 }
 
 #bodyProjects{
