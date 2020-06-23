@@ -240,6 +240,49 @@ html{
   flex-direction: row;
 }
 
+.skillsRow{
+  display: flex;
+  flex-direction: row;
+}
+
+.skillBox{
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillBG1 {
+  background-color:#b58900;
+}
+.skillBG2{
+  background-color: #cb4b16;
+}
+.skillBG3 {
+  background-color: #d30102;
+}
+.skillBG4 {
+  background-color: #d33682;
+}
+.skillBG5 {
+  background-color: #6c71c4;
+}
+.skillBG6 {
+  background-color: #268bd2;
+}
+.skillBG7 {
+  background-color: #2aa198;
+}
+.skillBG8 {
+  background-color: #859900;
+}
+.skillBox svg {
+  height: 150px;
+}
+
+
 
 
 @keyframes blinking-cursor {
