@@ -219,17 +219,22 @@ html{
 .projectPreview{
   width: 33.33%;
   height: 800px;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
 }
 
 .projectPreview img {
   object-fit: cover;
   height: 100%;
   width: 100%;
-}
-#cumulusNotePreviewDiv{
-  background-image: url(../src/images/CumulusScreen.png);
+  opacity: 0.4;
+  cursor: pointer;
 }
 
+.projectPreview img:hover {
+  opacity: 1;
+}
 #bodyProjects{
   display: flex;
   flex-direction: row;
