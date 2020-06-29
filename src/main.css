@@ -315,4 +315,12 @@ html{
     font-size: 2em;
     margin-left: 5px;
   }
+
+  .skillBox {
+    height: 50px;
+    width: 50px;
+  }
+  .skillBox svg{
+    height: 40px;
+  }
 }
