@@ -1,4 +1,5 @@
 const Content = require('./content');
+const Menu = require('./menu')
 
 class Startup{
   constructor(mainDiv){
@@ -39,6 +40,8 @@ class Startup{
               openingTextDiv.classList.add("hideMe")
               openingTextP.classList.add("hideMe")
               this.content.startAbout()
+              const MenuMain = new Menu()
+              MenuMain.start()
               
             }, 2000)
           }
@@ -48,6 +51,8 @@ class Startup{
 
     }
     if (this.started) console.log("is anyone there?")
+
+    
   }
 
 

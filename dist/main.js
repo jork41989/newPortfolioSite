@@ -108,6 +108,17 @@ eval("const Startup = __webpack_require__(/*! ./startup */ \"./src/startup.js\")
 
 /***/ }),
 
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("class Menu{\n  constructor(){\n    this.currentPage = \"about\"\n  }\n\n  pageSwitch(selected){\n    let cur = document.getElementById(this.currentPage)\n    let select = document.getElementById(selected)\n    cur.classList.remove()\n  }\n\n  pageButtons(){\n    let about = document.getElementById(\"about\")\n    let projects = document.getElementById(\"projects\")\n    let skills = document.getElementById(\"skills\")\n    let resume = document.getElementById(\"resume\")\n\n    about.addEventListener(\"click\", () => {\n      console.log(\"about\")\n    })\n\n    projects.addEventListener(\"click\", () => {\n      console.log(\"Projects\")\n    })\n\n    skills.addEventListener(\"click\", () => {\n      console.log(\"skills\")\n    })\n\n    resume.addEventListener(\"click\", () =>{\n      console.log(\"resume\")\n    })\n  }\n\n  start(){\n    this.currentPage = \"about\"\n    this.pageButtons();\n  }\n\n}\n\nmodule.exports = Menu;\n\n//# sourceURL=webpack:///./src/menu.js?");
+
+/***/ }),
+
 /***/ "./src/startup.js":
 /*!************************!*\
   !*** ./src/startup.js ***!
@@ -115,7 +126,7 @@ eval("const Startup = __webpack_require__(/*! ./startup */ \"./src/startup.js\")
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const Content = __webpack_require__(/*! ./content */ \"./src/content.js\");\n\nclass Startup{\n  constructor(mainDiv){\n    this.started = false;\n    this.i = 0\n    this.goForLaunch = this.goForLaunch.bind(this)\n    this.content = new Content\n    \n  }\n\n  \n\n  goForLaunch(){\n    this.openingCrawl()\n    if (this.started) console.log(\"is anyone there?\")\n    \n\n  }\n  \n  openingCrawl(){\n    let openingDiv = document.getElementById(\"opening\")\n    let openingText = document.getElementById(\"openingText\")\n    let openingTextDiv = document.getElementById(\"openingTextDiv\")\n    let openingTextP = document.getElementById(\"openingText\")\n    \n    if (!this.started) {\n      let message = \"Welcome To JordanAckerman.com\"\n      let mesSplit = message.split(\"\")\n      let timeout = 200;\n      mesSplit.forEach(char => {\n\n        setTimeout(() => {\n          openingText.innerHTML += char;\n          if(message === openingText.innerHTML) {\n            this.started = true\n            setTimeout(()=>{\n              openingDiv.classList.add(\"hideMe\")\n              openingTextDiv.classList.add(\"hideMe\")\n              openingTextP.classList.add(\"hideMe\")\n              this.content.startAbout()\n              \n            }, 2000)\n          }\n        }, timeout)\n        timeout += 200\n      })\n\n    }\n    if (this.started) console.log(\"is anyone there?\")\n  }\n\n\n}\n\n\n\n\nmodule.exports = Startup\n\n//# sourceURL=webpack:///./src/startup.js?");
+eval("const Content = __webpack_require__(/*! ./content */ \"./src/content.js\");\nconst Menu = __webpack_require__(/*! ./menu */ \"./src/menu.js\")\n\nclass Startup{\n  constructor(mainDiv){\n    this.started = false;\n    this.i = 0\n    this.goForLaunch = this.goForLaunch.bind(this)\n    this.content = new Content\n    \n  }\n\n  \n\n  goForLaunch(){\n    this.openingCrawl()\n    if (this.started) console.log(\"is anyone there?\")\n    \n\n  }\n  \n  openingCrawl(){\n    let openingDiv = document.getElementById(\"opening\")\n    let openingText = document.getElementById(\"openingText\")\n    let openingTextDiv = document.getElementById(\"openingTextDiv\")\n    let openingTextP = document.getElementById(\"openingText\")\n    \n    if (!this.started) {\n      let message = \"Welcome To JordanAckerman.com\"\n      let mesSplit = message.split(\"\")\n      let timeout = 200;\n      mesSplit.forEach(char => {\n\n        setTimeout(() => {\n          openingText.innerHTML += char;\n          if(message === openingText.innerHTML) {\n            this.started = true\n            setTimeout(()=>{\n              openingDiv.classList.add(\"hideMe\")\n              openingTextDiv.classList.add(\"hideMe\")\n              openingTextP.classList.add(\"hideMe\")\n              this.content.startAbout()\n              const MenuMain = new Menu()\n              MenuMain.start()\n              \n            }, 2000)\n          }\n        }, timeout)\n        timeout += 200\n      })\n\n    }\n    if (this.started) console.log(\"is anyone there?\")\n\n    \n  }\n\n\n}\n\n\n\n\nmodule.exports = Startup\n\n//# sourceURL=webpack:///./src/startup.js?");
 
 /***/ })
 
