@@ -311,8 +311,14 @@ html{
 
 .actionImg{
   background: url("./images/actionScreen.png");
- 
-  
+}
+
+.quackImg{
+  background: url("./images/quackScreen.png");
+}
+
+.cumulusImg{
+  background: url("./images/CumulusScreen.png");
 }
 
 .previewImg{
