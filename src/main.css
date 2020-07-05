@@ -305,6 +305,28 @@ html{
 .hidden{
   display: none;
 }
+.projectText{
+  position: relative;
+}
+
+.actionImg{
+  background: url("./images/actionScreen.png");
+ 
+  
+}
+
+.previewImg{
+ background-repeat: no-repeat;
+ background-size: cover;
+ height: 100%;
+ width: 100%;
+ background-position: center;
+ opacity: 0.4;
+}
+
+.previewImg:hover{
+  opacity: 1;
+}
 
 
 

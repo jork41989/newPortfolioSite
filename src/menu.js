@@ -4,9 +4,17 @@ class Menu{
   }
 
   pageSwitch(selected){
-    let cur = document.getElementById(this.currentPage)
-    let select = document.getElementById(selected)
-    cur.classList.remove()
+    let cur = document.getElementById(this.currentPage);
+    let select = document.getElementById(selected);
+    let curBody = document.getElementById(`${this.currentPage}Main`)
+    let selectedBody  = document.getElementById(`${selected}Main`)
+    cur.classList.remove("selectedMenu");
+    cur.classList.add("notSelectedMenu");
+    select.classList.add("selectedMenu");
+    select.classList.remove("notSelectedMenu");
+    curBody.classList.add("hidden")
+    selectedBody.classList.remove("hidden")
+    this.currentPage = selected
   }
 
   pageButtons(){
@@ -16,19 +24,19 @@ class Menu{
     let resume = document.getElementById("resume")
 
     about.addEventListener("click", () => {
-      console.log("about")
+      this.pageSwitch("about")
     })
 
     projects.addEventListener("click", () => {
-      console.log("Projects")
+      this.pageSwitch("projects")
     })
 
     skills.addEventListener("click", () => {
-      console.log("skills")
+      this.pageSwitch("skills")
     })
 
     resume.addEventListener("click", () =>{
-      console.log("resume")
+      this.pageSwitch("resume")
     })
   }
 
