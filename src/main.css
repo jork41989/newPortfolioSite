@@ -306,7 +306,11 @@ html{
   display: none;
 }
 .projectText{
+  color: white;
+  font-size: 1em;
   position: relative;
+  top: -50%;
+  left: 38%;
 }
 
 .actionImg{
@@ -318,10 +322,11 @@ html{
 }
 
 .cumulusImg{
-  background: url("./images/CumulusScreen.png");
+    background: url("./images/CumulusScreen.png");
 }
 
 .previewImg{
+position: relative;
  background-repeat: no-repeat;
  background-size: cover;
  height: 100%;
@@ -332,6 +337,10 @@ html{
 
 .previewImg:hover{
   opacity: 1;
+}
+
+.projectPreview:hover .projectText{
+  background-color: black;
 }
 
 
