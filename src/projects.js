@@ -5,7 +5,11 @@ class Projects{
 
   openModal(type){
     let modal = document.getElementById("modal")
+    let cur = document.getElementById(type)
     modal.classList.remove("hideModal")
+    cur.classList.remove("hideModal")
+    this.currentMode = type;
+
   }
 
   projectButtons(){
@@ -15,13 +19,13 @@ class Projects{
 
 
     quack.addEventListener("click", () =>{
-      this.openModal("quack");
+      this.openModal("quackProjectDiv");
     })
     cumulus.addEventListener("click", () => {
-      this.openModal("cumulus");
+      this.openModal("cumulusNoteProjectDiv");
     })
     actionb.addEventListener("click", () => {
-       this.openModal("actionb");
+       this.openModal("actionBoxProjectDiv");
     })
     
   }
@@ -29,9 +33,11 @@ class Projects{
   closeButton(){
     let ex = document.getElementById("closeModal")
     let modal = document.getElementById("modal")
+    let cur = document.getElementById(this.currentMode)
     ex.addEventListener("click", () =>{
 
       modal.classList.add("hideModal")
+      cur.classList.add("hideModal")
     })
   }
 
