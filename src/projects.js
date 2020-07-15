@@ -15,9 +15,15 @@ class Projects{
 
 
     quack.addEventListener("click", () =>{
-      console.log("quack")
       this.openModal("quack");
     })
+    cumulus.addEventListener("click", () => {
+      this.openModal("cumulus");
+    })
+    actionb.addEventListener("click", () => {
+       this.openModal("actionb");
+    })
+    
   }
 
   closeButton(){
