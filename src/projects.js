@@ -33,11 +33,13 @@ class Projects{
   closeButton(){
     let ex = document.getElementById("closeModal")
     let modal = document.getElementById("modal")
-    let cur = document.getElementById(this.currentMode)
+    
+    console.log(this.currentMode)
     ex.addEventListener("click", () =>{
-
-      modal.classList.add("hideModal")
+      let cur = document.getElementById(this.currentMode)
       cur.classList.add("hideModal")
+      modal.classList.add("hideModal")
+      
     })
   }
 
