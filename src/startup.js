@@ -1,5 +1,6 @@
 const Content = require('./content');
 const Menu = require('./menu')
+const Projects = require('./projects')
 
 class Startup{
   constructor(mainDiv){
@@ -41,7 +42,9 @@ class Startup{
               openingTextP.classList.add("hideMe")
               this.content.startAbout()
               const MenuMain = new Menu()
+              const ProjectsMain = new Projects()
               MenuMain.start()
+              ProjectsMain.start()
               
             }, 2000)
           }

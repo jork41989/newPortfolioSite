@@ -353,6 +353,36 @@ position: relative;
 }
 
 
+.projectModal{
+  position: absolute;
+  width: 86%;
+  height: 79%;
+  background: #073642;
+  border-radius: 30px;
+  margin: 10px;
+  padding: 4%;
+  border: #586E75 11px solid;
+  top: 0;
+  left: 2%;
+}
+
+#closeModal{
+  font-family: Monaco;
+  font-size: 2em;
+  color: #EEE8D5;
+  position: absolute;
+  right: 46px;
+  cursor: pointer;
+  top: 40px;
+}
+
+.hideModal{
+  display: none;
+}
+
+.showModal{
+  display: grid;
+}
 
 @keyframes blinking-cursor {
   from, to { border-color: transparent }
