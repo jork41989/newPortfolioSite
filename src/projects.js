@@ -20,10 +20,20 @@ class Projects{
     })
   }
 
+  closeButton(){
+    let ex = document.getElementById("closeModal")
+    let modal = document.getElementById("modal")
+    ex.addEventListener("click", () =>{
+
+      modal.classList.add("hideModal")
+    })
+  }
+
 
   start(){
-    console.log("hello");
+
     this.projectButtons();
+    this.closeButton();
     
   }
 }

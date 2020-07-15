@@ -119,6 +119,17 @@ eval("class Menu{\n  constructor(){\n    this.currentPage = \"about\"\n  }\n\n  
 
 /***/ }),
 
+/***/ "./src/projects.js":
+/*!*************************!*\
+  !*** ./src/projects.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("class Projects{\n  constructor() {\n    this.currentMode = \"none\"\n  }\n\n  openModal(type){\n    let modal = document.getElementById(\"modal\")\n    modal.classList.remove(\"hideModal\")\n  }\n\n  projectButtons(){\n    let quack = document.getElementById(\"quackPreviewDiv\");\n    let cumulus = document.getElementById(\"cumulusNotePreviewDiv\");\n    let actionb = document.getElementById(\"actionBoxPreviewDiv\");\n\n\n    quack.addEventListener(\"click\", () =>{\n      console.log(\"quack\")\n      this.openModal(\"quack\");\n    })\n  }\n\n  closeButton(){\n    let ex = document.getElementById(\"closeModal\")\n    let modal = document.getElementById(\"modal\")\n    ex.addEventListener(\"click\", () =>{\n\n      modal.classList.add(\"hideModal\")\n    })\n  }\n\n\n  start(){\n\n    this.projectButtons();\n    this.closeButton();\n    \n  }\n}\n\n\nmodule.exports = Projects;\n\n//# sourceURL=webpack:///./src/projects.js?");
+
+/***/ }),
+
 /***/ "./src/startup.js":
 /*!************************!*\
   !*** ./src/startup.js ***!
@@ -126,7 +137,7 @@ eval("class Menu{\n  constructor(){\n    this.currentPage = \"about\"\n  }\n\n  
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const Content = __webpack_require__(/*! ./content */ \"./src/content.js\");\nconst Menu = __webpack_require__(/*! ./menu */ \"./src/menu.js\")\n\nclass Startup{\n  constructor(mainDiv){\n    this.started = false;\n    this.i = 0\n    this.goForLaunch = this.goForLaunch.bind(this)\n    this.content = new Content\n    \n  }\n\n  \n\n  goForLaunch(){\n    this.openingCrawl()\n    if (this.started) console.log(\"is anyone there?\")\n    \n\n  }\n  \n  openingCrawl(){\n    let openingDiv = document.getElementById(\"opening\")\n    let openingText = document.getElementById(\"openingText\")\n    let openingTextDiv = document.getElementById(\"openingTextDiv\")\n    let openingTextP = document.getElementById(\"openingText\")\n    \n    if (!this.started) {\n      let message = \"Welcome To JordanAckerman.com\"\n      let mesSplit = message.split(\"\")\n      let timeout = 200;\n      mesSplit.forEach(char => {\n\n        setTimeout(() => {\n          openingText.innerHTML += char;\n          if(message === openingText.innerHTML) {\n            this.started = true\n            setTimeout(()=>{\n              openingDiv.classList.add(\"hideMe\")\n              openingTextDiv.classList.add(\"hideMe\")\n              openingTextP.classList.add(\"hideMe\")\n              this.content.startAbout()\n              const MenuMain = new Menu()\n              MenuMain.start()\n              \n            }, 2000)\n          }\n        }, timeout)\n        timeout += 200\n      })\n\n    }\n    if (this.started) console.log(\"is anyone there?\")\n\n    \n  }\n\n\n}\n\n\n\n\nmodule.exports = Startup\n\n//# sourceURL=webpack:///./src/startup.js?");
+eval("const Content = __webpack_require__(/*! ./content */ \"./src/content.js\");\nconst Menu = __webpack_require__(/*! ./menu */ \"./src/menu.js\")\nconst Projects = __webpack_require__(/*! ./projects */ \"./src/projects.js\")\n\nclass Startup{\n  constructor(mainDiv){\n    this.started = false;\n    this.i = 0\n    this.goForLaunch = this.goForLaunch.bind(this)\n    this.content = new Content\n    \n  }\n\n  \n\n  goForLaunch(){\n    this.openingCrawl()\n    if (this.started) console.log(\"is anyone there?\")\n    \n\n  }\n  \n  openingCrawl(){\n    let openingDiv = document.getElementById(\"opening\")\n    let openingText = document.getElementById(\"openingText\")\n    let openingTextDiv = document.getElementById(\"openingTextDiv\")\n    let openingTextP = document.getElementById(\"openingText\")\n    \n    if (!this.started) {\n      let message = \"Welcome To JordanAckerman.com\"\n      let mesSplit = message.split(\"\")\n      let timeout = 200;\n      mesSplit.forEach(char => {\n\n        setTimeout(() => {\n          openingText.innerHTML += char;\n          if(message === openingText.innerHTML) {\n            this.started = true\n            setTimeout(()=>{\n              openingDiv.classList.add(\"hideMe\")\n              openingTextDiv.classList.add(\"hideMe\")\n              openingTextP.classList.add(\"hideMe\")\n              this.content.startAbout()\n              const MenuMain = new Menu()\n              const ProjectsMain = new Projects()\n              MenuMain.start()\n              ProjectsMain.start()\n              \n            }, 2000)\n          }\n        }, timeout)\n        timeout += 200\n      })\n\n    }\n    if (this.started) console.log(\"is anyone there?\")\n\n    \n  }\n\n\n}\n\n\n\n\nmodule.exports = Startup\n\n//# sourceURL=webpack:///./src/startup.js?");
 
 /***/ })
 
