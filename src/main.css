@@ -307,12 +307,14 @@ html{
 }
 .projectText{
 color: white;
-font-size: 1em;
+font-size: 1.2em;
+font-family: Monaco;
 position: relative;
 top: -50%;
-left: 33%;
+left: 27%;
 width: 40%;
 text-align: center;
+ cursor: pointer;
 }
 
 .actionImg{
@@ -335,9 +337,14 @@ position: relative;
  width: 100%;
  background-position: center;
  opacity: 0.4;
+ cursor: pointer;
 }
 
 .previewImg:hover{
+  opacity: 1;
+}
+
+.projectText:hover .previewImg{
   opacity: 1;
 }
 
