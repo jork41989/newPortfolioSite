@@ -1,0 +1,14 @@
+#bodyResume{
+  display: flex;
+  flex-direction: row;
+}
+
+.resumeLeft{
+  display: flex;
+  flex-direction: column;
+}
+
+.resumeRight{
+  display: flex;
+  flex-direction: column;
+}

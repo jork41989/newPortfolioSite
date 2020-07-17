@@ -114,12 +114,17 @@
     font-size: 1.5em;
     color: #EEE8D5;
     text-decoration: none;
-    margin-left: 10px;
+}
+
+.projectLink:first-child{
+  margin-right: 75px;
 }
 
 .projectLinksDiv{
   margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 .projectName{
@@ -129,4 +134,10 @@
   text-align: center;
   display: inherit;
   margin-bottom: 10px;
+}
+
+.projectDes{
+  font-family: Monaco;
+  font-size: 1.5em;
+  color: #EEE8D5;
 }
