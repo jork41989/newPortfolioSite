@@ -109,10 +109,24 @@
   align-items: center;
 }
 
+.projectLink{
+    font-family: Monaco;
+    font-size: 1.5em;
+    color: #EEE8D5;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.projectLinksDiv{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .projectName{
   font-family: Monaco;
   font-size: 2em;
   color: #EEE8D5;
   text-align: center;
   display: inherit;
+  margin-bottom: 10px;
 }
