@@ -8,6 +8,7 @@ class Projects{
     let cur = document.getElementById(type)
     modal.classList.remove("hideModal")
     cur.classList.remove("hideModal")
+    cur.classList.add("showModal")
     this.currentMode = type;
 
   }
@@ -39,6 +40,7 @@ class Projects{
       let cur = document.getElementById(this.currentMode)
       cur.classList.add("hideModal")
       modal.classList.add("hideModal")
+      cur.classList.remove("showModal")
       
     })
   }

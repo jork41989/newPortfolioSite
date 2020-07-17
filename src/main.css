@@ -217,30 +217,6 @@ html{
 
 }
 
-.projectPreview{
-  width: 33.33%;
-  height: 800px;
-    background-position: center;
-    background-size: cover;
-    background-color: black;
-}
-
-.projectPreview img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  opacity: 0.4;
-  cursor: pointer;
-}
-
-.projectPreview img:hover {
-  opacity: 1;
-}
-#bodyProjects{
-  display: flex;
-  flex-direction: row;
-}
-
 #bodySkills{
       align-items: center;
       display: flex;
@@ -306,84 +282,10 @@ html{
 .hidden{
   display: none;
 }
-.projectText{
-color: white;
-font-size: 1.2em;
-font-family: Monaco;
-position: relative;
-top: -50%;
-left: 27%;
-width: 40%;
-text-align: center;
- cursor: pointer;
-}
-
-.actionImg{
-  background: url("./images/actionScreen.png");
-}
-
-.quackImg{
-  background: url("./images/quackScreen.png");
-}
-
-.cumulusImg{
-    background: url("./images/CumulusScreen.png");
-}
-
-.previewImg{
-position: relative;
- background-repeat: no-repeat;
- background-size: cover;
- height: 100%;
- width: 100%;
- background-position: center;
- opacity: 0.4;
- cursor: pointer;
-}
-
-.previewImg:hover{
-  opacity: 1;
-}
-
-.projectText:hover .previewImg{
-  opacity: 1;
-}
-
-.projectPreview:hover .projectText{
-  background-color: black;
-}
 
 
-.projectModal{
-  position: absolute;
-  width: 87%;
-  height: 85%;
-  background: #073642;
-  border-radius: 30px;
-  margin: 10px;
-  padding: 4%;
-  border: #586E75 11px solid;
-  top: 0;
-  left: 1%;
-}
 
-#closeModal{
-  font-family: Monaco;
-  font-size: 2em;
-  color: #EEE8D5;
-  position: absolute;
-  right: 46px;
-  cursor: pointer;
-  top: 40px;
-}
 
-.hideModal{
-  display: none;
-}
-
-.showModal{
-  display: grid;
-}
 
 @keyframes blinking-cursor {
   from, to { border-color: transparent }
