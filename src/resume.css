@@ -1,14 +1,25 @@
 #bodyResume{
   display: flex;
-  flex-direction: row;
-}
-
-.resumeLeft{
-  display: flex;
   flex-direction: column;
 }
 
-.resumeRight{
-  display: flex;
-  flex-direction: column;
+.resumeName{
+  font-family: Monaco;
+  font-size: 2em;
+  color: #b58900;
+  text-align: center;
+  display: inherit;
+  margin-bottom: 10px;
+}
+.contactInfo{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Monaco;
+    font-size: 1.5em;
+    color: #EEE8D5;
+    text-decoration: none;
 }
