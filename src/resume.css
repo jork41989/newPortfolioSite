@@ -23,3 +23,34 @@
     color: #EEE8D5;
     text-decoration: none;
 }
+
+.resumeHeads{
+    font-family: Monaco;
+    font-size: 1.5em;
+    color: #b58900;
+    display: inherit;
+    margin-bottom: 10px;
+}
+
+.resumeText{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: Monaco;
+  font-size: 1.2em;
+  color: #EEE8D5;
+}
+
+.resumeJobDate{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+boldMe{
+  font-weight: bold;
+}
+
+.resumeJobTitleLocation{
+  display: flex;
+  flex-direction: row;
+}
