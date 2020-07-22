@@ -1,9 +1,28 @@
 .footerHead{
   display: flex;
   flex-direction: row;
-   margin-top: 10px;
-   margin-bottom: 10px;
-   font-family: Monaco;
-   font-size: 1.5em;
-   color: #586e75;
+  margin-top: 10px;
+  font-family: Monaco;
+  font-size: 1.5em;
+  color: #586e75;
+  justify-content: flex-start;
+  background: #073642;
+}
+
+.footerHeadUL{
+  border-bottom: #EEE8D5 1px;
+  color: #EEE8D5;
+}
+
+.footerMain{
+  width: 100%;
+}
+
+.footerHead p{
+  margin-right: 10px;
+}
+
+.footerLinks{
+  margin-bottom: 30px;
+  background: #002b36;
 }
