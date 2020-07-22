@@ -39,11 +39,19 @@
   font-size: 1.2em;
   color: #EEE8D5;
 }
+.resumeText li{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
 .resumeJobDate{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.noUL{
+  text-decoration: none;
 }
 
 .boldMe{

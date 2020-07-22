@@ -12,7 +12,7 @@
 
 .projectPreview {
   width: 33.33%;
-  height: 800px;
+  height: 600px;
   background-position: center;
   background-size: cover;
   background-color: black;
@@ -37,15 +37,15 @@
 
 
 .actionImg {
-  background: url("./images/actionScreen.png");
+  background: url("./images/actionScreen.jpg");
 }
 
 .quackImg {
-  background: url("./images/quackScreen.png");
+  background: url("./images/quackScreen.jpg");
 }
 
 .cumulusImg {
-  background: url("./images/CumulusScreen.png");
+  background: url("./images/CumulusScreen.jpg");
 }
 
 

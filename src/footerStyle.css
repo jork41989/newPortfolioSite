@@ -1,0 +1,9 @@
+.footerHead{
+  display: flex;
+  flex-direction: row;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   font-family: Monaco;
+   font-size: 1.5em;
+   color: #586e75;
+}

@@ -297,11 +297,14 @@ html{
   .Name{
     font-size: 2em;
     margin-left: 5px;
+    
   }
 
   .skillBox {
+
     height: 50px;
     width: 50px;
+    color: red;
   }
   .skillBox svg{
     height: 40px;
