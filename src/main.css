@@ -354,5 +354,8 @@ html{
     border-radius: 0px 0px 30px 30px;
   }
 
+  .sideBySide{
+    flex-direction: column-reverse;
+  }
 
 }
