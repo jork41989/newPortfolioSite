@@ -8,12 +8,14 @@ class Menu{
     let select = document.getElementById(selected);
     let curBody = document.getElementById(`${this.currentPage}Main`)
     let selectedBody  = document.getElementById(`${selected}Main`)
+    let selectedFoot = document.getElementById("footBranch")
     cur.classList.remove("selectedMenu");
     cur.classList.add("notSelectedMenu");
     select.classList.add("selectedMenu");
     select.classList.remove("notSelectedMenu");
     curBody.classList.add("hidden")
     selectedBody.classList.remove("hidden")
+    selectedFoot.innerText = selected
     this.currentPage = selected
   }
 

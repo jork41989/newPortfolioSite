@@ -78,5 +78,20 @@
 }
 
 .footerCopy {
-  background-color: #002b36;
+  background-color: rgb(0, 30, 38);
+  padding: 8px 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: Monaco;
+  font-size: 1em;
+  color: #839495;
+}
+
+.footBranchBar{
+  display: flex;
+  flex-direction: row;
+}
+
+#footBranch{
+  margin-left: 5px;
 }
