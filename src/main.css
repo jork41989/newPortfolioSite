@@ -324,7 +324,7 @@ html{
   50% { border-color: orange }
 }
 
-@media only screen and (max-width: 920px) {
+@media screen and (max-width: 1160px) {
 
   .Name{
     font-size: 2em;
@@ -334,11 +334,25 @@ html{
 
   .skillBox {
 
-    height: 50px;
-    width: 50px;
-    color: red;
+   flex-direction: column;
   }
-  .skillBox svg{
-    height: 40px;
+
+  .skillsRow{
+    flex-direction: column;
   }
+
+  #bodySkills{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .leftSide{
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  .rightSide{
+    border-radius: 0px 0px 30px 30px;
+  }
+
+
 }
