@@ -27,7 +27,6 @@
 }
 
 .footerLinks{
-  margin-bottom: 30px;
   background: #002b36;
 }
 
@@ -76,4 +75,8 @@
   background: #859900;
   color: #002b36;
   padding: 5px 2px 5px 2px;
+}
+
+.footerCopy {
+  background-color: #002b36;
 }
