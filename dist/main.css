@@ -1,7 +1,6 @@
 
 .mainDiv{
   background: #002B36;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
