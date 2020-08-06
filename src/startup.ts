@@ -3,11 +3,10 @@ import { Menu } from "../src/menu"
 import { Projects } from "../src/projects"
 
 export class Startup{
-  constructor( public started?: boolean, public i?: number, public content?){
+  constructor( public started?: boolean, public i?: number){
     this.started = false;
     this.i = 0
     this.goForLaunch = this.goForLaunch.bind(this)
-    this.content = new Content()
     
   }
 
@@ -40,7 +39,8 @@ export class Startup{
               openingDiv.classList.add("hideMe")
               openingTextDiv.classList.add("hideMe")
               openingTextP.classList.add("hideMe")
-              this.content.startAbout()
+              const content = new Content()
+              content.startAbout()
               const MenuMain = new Menu()
               MenuMain.start()
               
