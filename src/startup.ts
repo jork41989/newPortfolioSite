@@ -1,13 +1,13 @@
-const Content = require('./content');
-const Menu = require('./menu')
-const Projects = require('./projects')
+import { Content } from "../src/content"
+import { Menu } from "../src/menu"
+import { Projects } from "../src/projects"
 
-class Startup{
-  constructor(mainDiv){
+export class Startup{
+  constructor( public started?: boolean, public i?: number, public content?){
     this.started = false;
     this.i = 0
     this.goForLaunch = this.goForLaunch.bind(this)
-    this.content = new Content
+    this.content = new Content()
     
   }
 
@@ -58,8 +58,3 @@ class Startup{
 
 
 }
-
-
-
-
-module.exports = Startup

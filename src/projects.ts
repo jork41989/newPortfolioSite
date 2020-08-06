@@ -1,9 +1,9 @@
-class Projects{
-  constructor() {
+export class Projects{
+  constructor(public currentMode: string) {
     this.currentMode = "none"
   }
 
-  openModal(type){
+  openModal(type: string){
     let modal = document.getElementById("modal")
     let cur = document.getElementById(type)
     modal.classList.remove("hideModal")
@@ -53,6 +53,3 @@ class Projects{
     
   }
 }
-
-
-module.exports = Projects;

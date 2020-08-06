@@ -1,9 +1,9 @@
-class Menu{
-  constructor(){
+export class Menu{
+  constructor(public currentPage?: string){
     this.currentPage = "about"
   }
 
-  pageSwitch(selected){
+  pageSwitch(selected: string){
     let cur = document.getElementById(this.currentPage);
     let select = document.getElementById(selected);
     let curBody = document.getElementById(`${this.currentPage}Main`)
@@ -48,5 +48,3 @@ class Menu{
   }
 
 }
-
-module.exports = Menu;

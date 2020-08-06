@@ -1,4 +1,4 @@
-class Content {
+export class Content {
   constructor() {
     this.startAbout = this.startAbout.bind(this)
   }
@@ -16,4 +16,4 @@ class Content {
 
 }
 
-module.exports = Content
+// module.exports = Content
