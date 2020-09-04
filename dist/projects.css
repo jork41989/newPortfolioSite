@@ -31,6 +31,7 @@ padding: 10px 0px 10px 0px;
   background-position: center;
   background-size: cover;
   background-color: black;
+  margin-top: 12px;
 }
 
 .projectPreview img {
@@ -47,6 +48,7 @@ padding: 10px 0px 10px 0px;
 #bodyProjects {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 
@@ -62,6 +64,17 @@ padding: 10px 0px 10px 0px;
   background: url("./images/CumulusScreen.jpg");
 }
 
+.sneezeImg{
+  background: url("./images/sneezeScreen.png");
+}
+
+.masksImg{
+  background: url("./images/masksImg.png");
+}
+
+.ppaImg{
+  background: url("./images/ppaImg.png");
+}
 
 .previewImg {
   position: relative;
@@ -162,6 +175,7 @@ padding: 10px 0px 10px 0px;
 
   .projectPreview{
     width: 100%;
+    margin-top: 0px;
   }
 
 }
